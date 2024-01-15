@@ -4,7 +4,7 @@ make fencing more strict: done?
 
 */
 // version number
-const _ver='0.2.6';
+const _ver='0.2.7';
 console.log(`v${v.textContent=_ver}`);
 
 // zoom using mouse scroll wheel
@@ -20,15 +20,29 @@ let E = {
   json:null,
   b:[],
   a:null,
-  init:()=>{
-    fetch('/elements.json').then((rs)=>{
-      if (rs.ok) return rs.json();
-      else alert('error fetching the elements!');
-    }).then((json)=>{
-      setTimeout(()=>E.loadElems(json),500);
-    });
+  init:async ()=>{
+    let json;
+    try {
+      // fetch elements info file
+      let rsp = await fetch('./elements.json');
+      if (rsp && rsp.ok) json = await rsp.json();
+    } catch (e) {
+      // use backup if file can't be found
+      console.error('error fetching elements from JSON file, trying backup...');
+      console.warn(e);
+      try {
+        let bkp = `data:application/json;base64,ewogICJlbGVtZW50cyI6ewogICAgCiAgICAiYWx0YXJfdmVpbCI6ewogICAgICAidGl0bGUiOiJBbHRhciBWZWlsIiwKICAgICAgImltZ191cmwiOiIuL21lZGlhL3ByZXZpZXdzL2FsdGFyX3ZlaWwucG5nIiwKICAgICAgImRlc2NyaXB0aW9uIjoiTG9yZW0gaXBzdW0gZG9sb3Igc2l0IGFtZXQuIENvbnNlY3RldHVlciBhZGlwaXNjaW5nIGVsaXQsIHNlZCBkbyBlaXVzbW9kIHRlbXBvci4gSW5jaWRpZHVudCB1dCBsYWJvcmUsIGV0IGRvbG9yZSwgbWFnbmEgYWxpcXVhLiIsCiAgICAgICJ4IjoiMTk1MCIsCiAgICAgICJ5IjoiMTY3MCIKICAgIH0sCiAgICAKICAgICJhbHRhcl9pY29uX2plc3VzIjp7CiAgICAgICJ0aXRsZSI6Ikljb24gb2Ygb3VyIExvcmQgSmVzdXMgQ2hyaXN0IiwKICAgICAgImltZ191cmwiOiIuL21lZGlhL3ByZXZpZXdzL2FsdGFyX2ljb25famVzdXMucG5nIiwKICAgICAgImRlc2NyaXB0aW9uIjoiT24gdGhlIHJpZ2h0IHNpZGUgb2YgdGhlIFJveWFsIGRvb3IgdGhlIGljb24gb2Ygb3VyIExvcmQgSmVzdXMgQ2hyaXN0IGlzIHBsYWNlZC5cblRoaXMgaWNvbiBpcyBhIHJlbWluZGVyIHRoYXQgSmVzdXMgaXMgdGhlIHVuaXF1ZSBnYXRlIGxlYWRpbmcgdG8gdGhlIGhlYXZlbmx5IGtpbmdkb20uXG5cbk9uIHRoZSByaWdodCBzaWRlIG9mIHRoZSBlbnRyYW5jZSwgdGhlIGljb24gb2Ygb3VyIExvcmQgSmVzdXMgQ2hyaXN0IGlzIGZpdHRlZC4gSGUgYXBwZWFycyBob2xkaW5nIGEgc2hlZXQgb2YgdGhlIEdvc3BlbCBzaG93aW5nIHRoZSB2ZXJzZSDigJxJIGFtIHRoZSBHb29kIFNoZXBoZXJk4oCdLiBUaGlzIGljb24gcmVtaW5kcyB1cyB0aGF0IEplc3VzIENocmlzdCBpcyB0aGUgdW5pcXVlIGdhdGUgbGVhZGluZyB0byB0aGUgaGVhdmVubHkgS2luZ2RvbS4gSGUgaXMgdGhlIEdvb2QgU2hlcGhlcmQgd2hvIG9wZW5lZCB0aGUgZ2F0ZXMgdG8gaGVhdmVuIHRocm91Z2ggSGlzIGxpZmUtZ2l2aW5nIHNhY3JpZmljZS4iLAogICAgICAieCI6IjIzNjUiLAogICAgICAieSI6IjE2NDAiCiAgICB9LAoKICAgICJhbHRhcl9pY29uX2pvaG5fYmFwdGlzdCI6ewogICAgICAidGl0bGUiOiJJY29uIG9mIFN0LiBKb2huIHRoZSBCYXB0aXN0IiwKICAgICAgImltZ191cmwiOiIuL21lZGlhL3ByZXZpZXdzL2FsdGFyX2ljb25fam9obl9iYXB0aXN0LnBuZyIsCiAgICAgICJkZXNjcmlwdGlvbiI6Ik5leHQgdG8gdGhlIEljb24gb2Ygb3VyIExvcmQgSmVzdXMgQ2hyaXN0IGlzIHRoZSBJY29uIG9mIFN0LiBKb2huIHRoZSBCYXB0aXN0LCB3aG8gcHJlcGFyZWQgdGhlIHdheSBmb3IgdGhlIExvcmTigJlzIGNvbWluZyIsCiAgICAgICJ4IjoiMjUxNSIsCiAgICAgICJ5IjoiMTY0MCIKICAgIH0sCgogICAgImFsdGFyX2ljb25fcGF0cm9uX3NhaW50Ijp7CiAgICAgICJ0aXRsZSI6Ikljb24gb2YgdGhlIFBhdHJvbiBTYWludCBvZiB0aGUgSW5kaXZpZHVhbCBDaHVyY2giLAogICAgICAiaW1nX3VybCI6Ii4vbWVkaWEvcHJldmlld3MvYWx0YXJfaWNvbl9wYXRyb25fc2FpbnQucG5nIiwKICAgICAgImRlc2NyaXB0aW9uIjoiTmV4dCB0byB0aGUgSWNvbiBvZiBTdC4gSm9obiB0aGUgQmFwdGlzdCBjb21lcyB0aGUgSWNvbiBvZiB0aGUgUGF0cm9uIFNhaW50IG9mIHRoZSBjaHVyY2guIFRoaXMgaWNvbiBjYW4gYmUgZm9sbG93ZWQgYnkgYW55IG51bWJlciBvZiBpY29ucyBvZiBzYWludHMgb3IgbWFydHlycyBvciBldmVudHMgZnJvbSBib3RoIHRoZSBOZXcgYW5kIE9sZCBUZXN0YW1lbnRzIiwKICAgICAgIngiOiIyNjYwIiwKICAgICAgInkiOiIxNjQwIgogICAgfSwKCiAgICAiYWx0YXJfaWNvbl90aGVvdG9rb3MiOnsKICAgICAgInRpdGxlIjoiSWNvbiBvZiBUaGVvdG9rb3MgU3QuIE1hcnkiLAogICAgICAiaW1nX3VybCI6Ii4vbWVkaWEvcHJldmlld3MvYWx0YXJfaWNvbl90aGVvdG9rb3MucG5nIiwKICAgICAgImRlc2NyaXB0aW9uIjoiU3QuIE1hcnkgcmVwcmVzZW50cyB0aGUgd2hvbGUgY2h1cmNoIGFuZCB0aGUgUXVlZW4gd2hvIHNpdHMgb24gdGhlIHJpZ2h0IGhhbmQgb2Ygb3VyIExvcmQgSmVzdXMgQ2hyaXN0IiwKICAgICAgIngiOiIxNTQwIiwKICAgICAgInkiOiIxNjQwIgogICAgfSwKCiAgICAiYWx0YXJfaWNvbl9sYXN0X3N1cHBlciI6ewogICAgICAidGl0bGUiOiJUaGUgTGFzdCBTdXBwZXIiLAogICAgICAiaW1nX3VybCI6Ii4vbWVkaWEvcHJldmlld3MvYWx0YXJfaWNvbl9sYXN0X3N1cHBlci5wbmciLAogICAgICAiZGVzY3JpcHRpb24iOiJEaXJlY3RseSBhYm92ZSB0aGUgU2FuY3R1YXJ5IGVudHJhbmNlLCB0aGUgaWNvbiBvZiB0aGUgbGFzdCBzdXBwZXIgaXMgbW91bnRlZC4gSXQgc2hvd3MgQ2hyaXN0IGdpdmluZyBjb21tdW5pb24gdG8gSGlzIGRpc2NpcGxlcywgd2hpY2ggaWxsdXN0cmF0ZXMgYW5kIHNpZ25pZmllcyB0aGUgU2FjcmlmaWNlIGluc3RpdHV0ZWQgYnkgb3VyIExvcmQgQ2hyaXN0LiIsCiAgICAgICJ4IjoiMTk1MCIsCiAgICAgICJ5IjoiMTQ1MCIKICAgIH0sCgogICAgImFsdGFyX2ljb25fYXBvc3RsZXMiOnsKICAgICAgInRpdGxlIjoiVGhlIDEyIEFwb3N0bGVzIiwKICAgICAgImltZ191cmwiOiIuL21lZGlhL3ByZXZpZXdzL2FsdGFyX2ljb25fYXBvc3RsZXMucG5nIiwKICAgICAgImRlc2NyaXB0aW9uIjoiQWxvbmcgdGhlIHRvcCByb3cgb2YgdGhlIGljb25vc3Rhc2lzIGFyZSB0aGUgaWNvbnMgb2YgdGhlIHR3ZWx2ZSBkaXNjaXBsZXMuIFRoZXkgY29uZmlybSB0aGUgYXBvc3RvbGljIG5hdHVyZSBvZiBvdXIgY2h1cmNoLiBPcnRob2RveHkgaXMgZXN0YWJsaXNoZWQgb24gdGhlIGFwb3N0b2xpYyBmYWl0aCwgY29udGludWVzIHRvIGV4aXN0IGluIGFuIGFwb3N0b2xpYyB3YXksIGFuZCBpcyBzaGVwaGVyZGVkIGJ5IGFwb3N0b2xpYyBwYXN0b3JzLiIsCiAgICAgICJ4IjoiMTc0MCIsCiAgICAgICJ5IjoiMTQ1MCIKICAgIH0sCgogICAgImFsdGFyX2ljb25fbmljaGUiOnsKICAgICAgInRpdGxlIjoiTmljaGUvYXBzZSIsCiAgICAgICJpbWdfdXJsIjoiLi9tZWRpYS9wcmV2aWV3cy9hbHRhcl9uaWNoZS5wbmciLAogICAgICAiZGVzY3JpcHRpb24iOiJUaGUgTmljaGUsIG9yIHRoZSBhcHNlLCBpcyB0aGUgc2VtaWNpcmN1bGFyIGVhc3Rlcm4gd2FsbCBvZiB0aGUgU2FuY3R1YXJ5LiBJdCBvZnRlbiBjb250YWlucyB0aGUgaWNvbiBvZiB0aGUgTG9yZCBKZXN1cyBDaHJpc3QsIHN1cnJvdW5kZWQgYnkgdGhlIENoZXJ1YmltIGFuZCB0aGUgU2VyYXBoaW0sIHRoZSBmb3VyIExpdmluZyBjcmVhdHVyZXMsIGFuZCB0aGUgdHdlbnR5IGZvdXIgaGVhdmVubHkgUHJlc2J5dGVycyBvZmZlcmluZyBpbmNlbnNlLlxuXG5UaGUgTG9yZCBhcHBlYXJzIGhvbGRpbmcgdGhlIHBsYW5ldCBFYXJ0aCB3aXRoIG9uZSBoYW5kLCBmb3IgSGUgaXMgdGhlIEFsbWlnaHR5IG9uZSwgYW5kIHRoZSBwYXN0b3JhbCByb2Qgd2l0aCB0aGUgb3RoZXIgaGFuZCwgZm9yIEhlIGlzIHRoZSBTaGVwaGVyZCBhbmQgUmVkZWVtZXIgd2hvIGxpYmVyYXRlcyBtZW4gZnJvbSB0aGUgY2FwdGl2aXR5IG9mIHNpbi4gVGh1cywgdGhlIE5pY2hlIHJlcHJlc2VudHMgdGhlIGJvc29tIG9mIEdvZCwgZm9yIHRoZSBMb3JkIGxvbmdzIGZvciBIaXMgY2h1cmNoLCB3aG8gaW4gdHVybiBhd2FpdHMgSGlzIGNvbWluZy4iLAogICAgICAieCI6IjE5NTAiLAogICAgICAieSI6IjExNTAiCiAgICB9CiAgICAKICB9Cn0=`;
+        if (!bkp) throw new Error('no bkp JSON available');
+        json = await (await fetch(bkp)).json();
+        alert('initial elements info file not found, using backup info...');
+      } catch (e) {
+        console.error(e);
+        return alert('error fetching the elements\' information!');
+      }
+    }
+    setTimeout(()=>E.loadElems(json),500);
   },
-  offset:{x:-1170,y:-1750,scale:2.12}, // temporary, to help with moving elems for different images
+  offset:{x:-1170,y:-1750,scale:2.12}, // (possibly) temporary, to help with moving elems for different images
   loadElems:(json)=>{
     if (json==null) return alert('json is null!');
     //console.log('got json:',json);
@@ -111,7 +125,7 @@ let T = {
     setTimeout(()=>{
       T.th.textContent=e.title;
       if (e.img_url) {
-        T.ti.innerHTML=`<img src="/${e.img_url}"></img>`;
+        T.ti.innerHTML=`<img src="./${e.img_url}"></img>`;
         let i=T.ti.querySelector('img');
         i.onload=i.onerror=()=>{
           i.onload=i.onerror=null;
