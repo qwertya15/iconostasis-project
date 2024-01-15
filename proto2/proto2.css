@@ -1,0 +1,308 @@
+/* page styles */
+html,body {
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+body {
+  margin:0px;
+  font:0.8em sans-serif;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  overscroll-behavior:none;
+  position:absolute;
+  left:0px;
+  top:0px;
+}
+button {
+  font-size:inherit;
+}
+
+/* (old) header bar styles
+header {
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:space-between;
+  background:#ddd;
+  padding-inline:0.2em;
+  height:2em;
+  top:0px;
+  position:sticky;
+  z-index:5;
+}
+*/
+.icon {
+  display:block;
+  background:
+    url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAHdJREFUOE+tk0sOwCAIRPWcnI9z2kCQIGpJOnVl+Dxg0N7A08H8VgGGFbjGvQFm8mzyGLsZmXkQkdg3QPD55EeqBS7yMHMz8GLPAK9qCRoc71mTCMgtVwvS3F8BAoRG8JYREUUwfI3WyreHlKSHnnK1RvVXn6mEPBJeNBETRcZzAAAAAElFTkSuQmCC')
+    center no-repeat #0000;
+  width:16px;
+  height:16px;
+  margin-inline:0.2em;
+}
+.title {
+  font-size:1.6em;
+  padding-inline:0.2em;
+}
+
+/* main content styles */
+main {
+  flex-grow:1;
+  background-color:#aaa;
+  display:flex;
+  width:100vw;
+  height:100vh;
+}
+#container {
+  flex-grow:1;
+  line-height:0px;
+  z-index:1;
+  overflow:clip;
+  cursor:grab !important;
+}
+#img {
+  cursor:grab !important;
+  width:fit-content;
+}
+#img:active {
+  cursor:grabbing !important;
+}
+#tooltip {
+  --x:32px;
+  --y:32px;
+  display:block;
+  width:min(56vw,24em);
+  height:fit-content;
+  padding-inline:0.8em;
+  position:absolute;
+  left:var(--x);
+  top:var(--y);
+  visibility:visible;
+  opacity:1;
+  pointer-events:all;
+  transition:opacity, visibility;
+  transition-duration:0s;
+  transition-timing-function:cubic-bezier(0, 0, 0, 0.75); /* linear-like ease-in */
+  /* extra-fancy styling */
+  background-color:#ddd9;
+  backdrop-filter:blur(12px);
+  border:inset 2px #7772;
+  border-radius:0.5em;
+  box-shadow:3px 3px 4px 0px #333a;
+  z-index:10;
+}
+#tooltip.loaded {
+  transition-duration:0.3s;
+}
+#tooltip.hidden {
+  visibility:hidden;
+  opacity:0;
+  pointer-events:none;
+}
+#container.active+#tooltip,
+#container:active+#tooltip {
+  /* tooltip would sometimes be transparent on touch screens... */
+  /* opacity:0.5;
+  pointer-events:none; */
+}
+/* X button (also used for modal) */
+.close {
+  display:block;
+  width:16px;
+  height:16px;
+  margin-block:1em -2.5em;
+  padding:0px;
+  border:none;
+  border-radius:0px;
+  background:
+    url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAGJJREFUOE+1k9sOABAMQ/n/jyYSk9k9Gl51Z1pbb+DpYH3jgLFhGfTSWYDF8SBUfDRSqATMonlndbKELrjyVJ6z0keB8a5uLt8AsjvZKFmAQoS+MSomC+EgwaP8tFfZ4qTQCQH/FBHNVJnJAAAAAElFTkSuQmCC')
+    center no-repeat #0000;
+  position:relative;
+}
+.close:hover:not(:active),
+.close:focus-visible:not(:active) {
+  filter:brightness(1.2);
+}
+#tooltip .tt-header {
+  font-size:1.3em;
+  text-align:center;
+  font-weight:bold;
+  margin-left:1.2em;
+  margin-bottom:0.8em;
+}
+#tooltip .tt-img {
+  border:solid 2px #555;
+  border-radius:0.5em;
+  /* margin-inline:auto; */
+  /* text-align:center; */
+  overflow:clip;
+  line-height:0px;
+  width:fit-content;
+  max-width:calc(100% - 0.8em);
+
+  float:left;
+  margin-right:1em;
+  margin-bottom:0.1em;
+}
+#tooltip .tt-img img {
+  width:100%;
+  max-height:32vh;
+}
+#tooltip .tt-img.hidden {
+  display:none;
+}
+#tooltip .tt-desc {
+  /* max-height:32vh; */
+  /* overflow-y:scroll; */
+  white-space:pre-wrap;
+}
+.element {
+  --x:0px;
+  --y:0px;
+  display:block;
+  width:36px;
+  height:36px;
+  border:none;
+  border-radius:36px;
+  position:absolute;
+  left:var(--x);
+  top:var(--y);
+  background:
+    url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAAMFBMVEUAAAAAmf8Amf8AmP8Amf8Amf8Amf8Amf8Amf8Amf8Aiv8Amf8Ao/8Amf8AmP8A///cOIxPAAAAEHRSTlMA/1Y3SBPAfdfoBpAKpCgBf88sdgAAAAlwSFlzAAAAJwAAACcBKgmRTwAAAPtJREFUeJxjYMAK+AwYZmQHIPjhjQkMgpJIChxlFRiClRi4DGAC7A/AFLf4BzB9FEQEqTIwMAneBwtsO8DAwNwoAVRvOA/EZxEEMrkFBTcAhcEWnRQHEmyCggkwE5/1MMBUQAFIHUuimAOQ4imDix7SAVONcKdAQeEGBiZVZAHHBAZOURCDqaNDAUSvC2BglAILCAoqQBVhCLDXoAlAAEzAcwOaQCG6wESge9UcEAKsM4FBVJiApOIIEEcKodnCJA0XYIWIIMyw3AUPEbDAcsFbUIG0B8zGxgYMK6Qh0cDAN1HsA0OwMgOLA8zc8GnAsJdF9spXoEA7A3YAAG1sLojptLL/AAAAAElFTkSuQmCC')
+    center no-repeat #cccc;
+  z-index:3;
+  padding:0px;
+  /* backdrop-filter:blur(8px); */
+  transition:filter 0.1s/*, scale 0.2s ease-in-out*/;
+}
+.element:hover:not(:active) {
+  filter:brightness(1.2);
+}
+button.element.active,
+button.element:active {
+  filter:brightness(0.8);
+  opacity:0.4;
+}
+.element.active {
+  pointer-events:none;
+}
+
+/* replit badge styles */
+#replitBadge {
+  opacity:0.8;
+  position:fixed;
+  bottom:1.5rem;
+  right:1.5rem;
+  pointer-events:none;
+  border-radius:0.4em;
+  z-index:5;
+}
+
+modal {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  width:100%;
+  height:100%;
+  position:fixed;
+  left:0;
+  top:0;
+  background:#cccb;
+  backdrop-filter:blur(2em);
+  z-index:3;
+}
+modal.loaded {
+  transition:opacity 0.3s, visibility 0.3s;
+}
+modal[open] {
+  opacity:1;
+  visibility:visible;
+  pointer-events:all;
+}
+modal .close {
+  float:right;
+}
+modal .modal-content {
+  width:75%;
+  max-width:32em;
+}
+modal .modal-content h2 {
+  text-align:center;
+}
+modal p {
+  white-space:pre-wrap;
+}
+modal footer {
+  font-size:0.8em;
+  font-style:italic;
+}
+.aboutBtn {
+  font-size:1em;
+  display:block;
+  position:fixed;
+  left:0;
+  top:0;
+  padding:0.4em 0.6em;
+  background:#eee7;
+  backdrop-filter:blur(4px);
+  border:none;
+  border-bottom:solid 0.1em #3337;
+  box-shadow:0.1em 0.1em 0.7em -0.4em #333;
+  border-radius:0 0 0.4em 0.4em;
+  z-index:2;
+}
+.aboutBar {
+  font-size:1em;
+  /* width:100%; */
+  display:inline-block;
+  position:fixed;
+  left:0;
+  top:0;
+  padding:0.4em 0.6em;
+  background:#eee7;
+  backdrop-filter:blur(4px);
+  border:none;
+  border-bottom:solid 0.1em #3337;
+  box-shadow:0.1em 0.1em 0.7em -0.4em #333;
+  border-radius:0 0 0.4em 0.4em;
+  z-index:2;
+}
+.aboutBar button {
+  line-height:1.5em;
+  user-select:none;
+}
+.aboutBtn+.aboutBtn {
+  left:3.8em;
+}
+#v {
+  float:right;
+  font-family:monospace;
+}
+#v::before {
+  content:'v';
+}
+
+noscript {
+  display:block;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:pink;
+  z-index:2;
+  text-align:center;
+}
+
+@media (min-width:600px)/*, (min-width:800px) and (orientation:portrait)*/ {
+  body {
+    font-size:1.2em;
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "elements":{
+    
+    "altar_veil":{
+      "title":"Altar Veil",
+      "img_url":"./media/previews/altar_veil.png",
+      "description":"Lorem ipsum dolor sit amet. Consectetuer adipiscing elit, sed do eiusmod tempor. Incididunt ut labore, et dolore, magna aliqua.",
+      "x":"1950",
+      "y":"1670"
+    },
+    
+    "altar_icon_jesus":{
+      "title":"Icon of our Lord Jesus Christ",
+      "img_url":"./media/previews/altar_icon_jesus.png",
+      "description":"On the right side of the Royal door the icon of our Lord Jesus Christ is placed.\nThis icon is a reminder that Jesus is the unique gate leading to the heavenly kingdom.\n\nOn the right side of the entrance, the icon of our Lord Jesus Christ is fitted. He appears holding a sheet of the Gospel showing the verse “I am the Good Shepherd”. This icon reminds us that Jesus Christ is the unique gate leading to the heavenly Kingdom. He is the Good Shepherd who opened the gates to heaven through His life-giving sacrifice.",
+      "x":"2365",
+      "y":"1640"
+    },
+
+    "altar_icon_john_baptist":{
+      "title":"Icon of St. John the Baptist",
+      "img_url":"./media/previews/altar_icon_john_baptist.png",
+      "description":"Next to the Icon of our Lord Jesus Christ is the Icon of St. John the Baptist, who prepared the way for the Lord’s coming",
+      "x":"2515",
+      "y":"1640"
+    },
+
+    "altar_icon_patron_saint":{
+      "title":"Icon of the Patron Saint of the Individual Church",
+      "img_url":"./media/previews/altar_icon_patron_saint.png",
+      "description":"Next to the Icon of St. John the Baptist comes the Icon of the Patron Saint of the church. This icon can be followed by any number of icons of saints or martyrs or events from both the New and Old Testaments",
+      "x":"2660",
+      "y":"1640"
+    },
+
+    "altar_icon_theotokos":{
+      "title":"Icon of Theotokos St. Mary",
+      "img_url":"./media/previews/altar_icon_theotokos.png",
+      "description":"St. Mary represents the whole church and the Queen who sits on the right hand of our Lord Jesus Christ",
+      "x":"1540",
+      "y":"1640"
+    },
+
+    "altar_icon_last_supper":{
+      "title":"The Last Supper",
+      "img_url":"./media/previews/altar_icon_last_supper.png",
+      "description":"Directly above the Sanctuary entrance, the icon of the last supper is mounted. It shows Christ giving communion to His disciples, which illustrates and signifies the Sacrifice instituted by our Lord Christ.",
+      "x":"1950",
+      "y":"1450"
+    },
+
+    "altar_icon_apostles":{
+      "title":"The 12 Apostles",
+      "img_url":"./media/previews/altar_icon_apostles.png",
+      "description":"Along the top row of the iconostasis are the icons of the twelve disciples. They confirm the apostolic nature of our church. Orthodoxy is established on the apostolic faith, continues to exist in an apostolic way, and is shepherded by apostolic pastors.",
+      "x":"1740",
+      "y":"1450"
+    },
+
+    "altar_icon_niche":{
+      "title":"Niche/apse",
+      "img_url":"./media/previews/altar_niche.png",
+      "description":"The Niche, or the apse, is the semicircular eastern wall of the Sanctuary. It often contains the icon of the Lord Jesus Christ, surrounded by the Cherubim and the Seraphim, the four Living creatures, and the twenty four heavenly Presbyters offering incense.\n\nThe Lord appears holding the planet Earth with one hand, for He is the Almighty one, and the pastoral rod with the other hand, for He is the Shepherd and Redeemer who liberates men from the captivity of sin. Thus, the Niche represents the bosom of God, for the Lord longs for His church, who in turn awaits His coming.",
+      "x":"1950",
+      "y":"1150"
+    }
+    
+  }
+}
