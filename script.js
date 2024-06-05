@@ -4,7 +4,7 @@ make fencing more strict: done?
 
 */
 // version number
-const _ver='0.2.7';
+const _ver='0.2.8';
 console.log(`v${v.textContent=_ver}`);
 
 // zoom using mouse scroll wheel
