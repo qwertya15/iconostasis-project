@@ -215,22 +215,30 @@ let I = {
       minScale: 0.125,
       maxScale: 4,
     });
-    I.c.addEventListener('wheel',I.pz.zoomWithWheel,{passive:false});
+    I.c.addEventListener('wheel',(e)=>I.pz.zoomWithWheel(e),{passive:false});
     I.reset();
 
     // update when window is resized
     window.onresize=()=>I.updatePZ();
   },
+  zoomCenter(isIn) {
+    I.pz.zoomWithWheel({
+      clientX:window.innerWidth/2,
+      clientY:window.innerHeight/2,
+      deltaY:isIn ? -4 : 4,
+      preventDefault(){},
+    })
+  },
   zoomIn:()=>{
-    I.pz.zoomIn({ focal: {x:window.innerWidth/2, y:window.innerHeight/2} });
+    I.zoomCenter(true);
     // I.updateBtns();
   },
   zoomOut:()=>{
-    I.pz.zoomOut({ focal: {x:window.innerWidth/2, y:window.innerHeight/2} });
+    I.zoomCenter(false);
     // I.updateBtns();
   },
   reset:()=>{
-    I.pz.zoom(0,{animate:true});
+    I.pz.zoom(0,{animate:false});
     // I.pz.pan(0,0);
     // I.updateBtns();
   },
@@ -238,6 +246,7 @@ let I = {
     E.update(1/s);
   },
   getScale:()=>I.pz.getScale(),
+  getStep:()=>I.pz.getOptions().step,
   updatePZ:()=>I.pz.zoom(I.getScale()),
 }
 
