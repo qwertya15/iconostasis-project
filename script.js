@@ -43,7 +43,8 @@ let E = {
     setTimeout(()=>E.loadElems(json),500);
   },
   // offset:{x:-1170,y:-1750,scale:2.12}, // (possibly) temporary, to help with moving elems for different images
-  offset:{x:0,y:0,scale:1},
+  offset:{x:-200,y:-1020,scale:1.62},
+  // offset:{x:0,y:0,scale:1},
   loadElems:(json)=>{
     if (json==null) return alert('json is null!');
     //console.log('got json:',json);
