@@ -4,7 +4,7 @@
     "altar_veil":{
       "title":"Altar Veil",
       "img_url":"./media/previews/altar_veil.png",
-      "description":"Lorem ipsum dolor sit amet. Consectetuer adipiscing elit, sed do eiusmod tempor. Incididunt ut labore, et dolore, magna aliqua.",
+      "description":"(work in progress)",
       "x":"1950",
       "y":"1670"
     },
@@ -12,7 +12,7 @@
     "altar_icon_jesus":{
       "title":"Icon of our Lord Jesus Christ",
       "img_url":"./media/previews/altar_icon_jesus.png",
-      "description":"On the right side of the Royal door the icon of our Lord Jesus Christ is placed.\nThis icon is a reminder that Jesus is the unique gate leading to the heavenly kingdom.\n\nOn the right side of the entrance, the icon of our Lord Jesus Christ is fitted. He appears holding a sheet of the Gospel showing the verse “I am the Good Shepherd”. This icon reminds us that Jesus Christ is the unique gate leading to the heavenly Kingdom. He is the Good Shepherd who opened the gates to heaven through His life-giving sacrifice.",
+      "description":"To the right side of the Royal door is the icon of our Lord Jesus Christ, identified by the Coptic letters “ⲒⲎⲤ ⲠⲬⲤ” on the sides of the Lord’s throne, which is the abbreviation for “Jesus Christ”.  This icon is a reminder that Jesus is the unique gate leading to the heavenly kingdom.\n\nAt the top of the icon the word “ⲠⲈⲚⲤⲰⲦⲎⲢ” is a reminder that Jesus is our “Savior” and He is the Good Shepherd who opened the gates to heaven through His life-giving sacrifice.",
       "x":"2365",
       "y":"1640"
     },
@@ -20,7 +20,7 @@
     "altar_icon_john_baptist":{
       "title":"Icon of St. John the Baptist",
       "img_url":"./media/previews/altar_icon_john_baptist.png",
-      "description":"Next to the Icon of our Lord Jesus Christ is the Icon of St. John the Baptist, who prepared the way for the Lord’s coming",
+      "description":"To the right of the Icon of our Lord Jesus Christ is the icon of St. John the Baptist, who prepared the way for the Lord’s coming, and about whom Christ said there was, “no greater man born” (Matt 11:11).",
       "x":"2515",
       "y":"1640"
     },
@@ -28,7 +28,7 @@
     "altar_icon_patron_saint":{
       "title":"Icon of the Patron Saint of the Individual Church",
       "img_url":"./media/previews/altar_icon_patron_saint.png",
-      "description":"Next to the Icon of St. John the Baptist comes the Icon of the Patron Saint of the church. This icon can be followed by any number of icons of saints or martyrs or events from both the New and Old Testaments",
+      "description":"Next to the Icon of St. John the Baptist comes the Icon of St. Athanasius the Apostolic, the patron saint of our parish.\n\nTraditionally in all Coptic Churches, this location on the iconostasis, is reserved to portrays the Saint in whose honor the Church was built.\n\nThis icon can be followed by any number of icons of saints, martyrs, or events from both the New and Old Testaments.",
       "x":"2660",
       "y":"1640"
     },
@@ -36,7 +36,7 @@
     "altar_icon_theotokos":{
       "title":"Icon of Theotokos St. Mary",
       "img_url":"./media/previews/altar_icon_theotokos.png",
-      "description":"St. Mary represents the whole church and the Queen who sits on the right hand of our Lord Jesus Christ",
+      "description":"To the left of the Royal Doors, is the icon of the Virgin Mary, who represents the whole church and the Queen who sits on the right hand of our Lord Jesus Christ.\n\nThe icon is inscribed with the words “ⲦⲠⲆⲢⲐⲈⲚⲞⲤ-ⲘⲢ ⲐϪ - ⲒⲎⲤ ⲠⲬⲤ” which is the Coptic for “The Virgin Maria mother of Jesus Christ”.",
       "x":"1540",
       "y":"1640"
     },
@@ -44,7 +44,7 @@
     "altar_icon_last_supper":{
       "title":"The Last Supper",
       "img_url":"./media/previews/altar_icon_last_supper.png",
-      "description":"Directly above the Sanctuary entrance, the icon of the last supper is mounted. It shows Christ giving communion to His disciples, which illustrates and signifies the Sacrifice instituted by our Lord Christ.",
+      "description":"Directly above the Royal Doors entrance, the icon of the Eucharist is mounted, since through these doors the King of Kings is brought out in the form of Holy Communion to the faithful.\n\nThe Last Supper icon shows Christ giving communion to His disciples, which illustrates and signifies the Sacrifice instituted by our Lord Christ.",
       "x":"1950",
       "y":"1450"
     },
@@ -60,7 +60,7 @@
     "altar_icon_niche":{
       "title":"Niche/apse",
       "img_url":"./media/previews/altar_niche.png",
-      "description":"The Niche, or the apse, is the semicircular eastern wall of the Sanctuary. It often contains the icon of the Lord Jesus Christ, surrounded by the Cherubim and the Seraphim, the four Living creatures, and the twenty four heavenly Presbyters offering incense.\n\nThe Lord appears holding the planet Earth with one hand, for He is the Almighty one, and the pastoral rod with the other hand, for He is the Shepherd and Redeemer who liberates men from the captivity of sin. Thus, the Niche represents the bosom of God, for the Lord longs for His church, who in turn awaits His coming.",
+      "description":"The Niche, or the apse, traditionally known as The Father’s Bosom, is the semicircular eastern wall of the Sanctuary facing the Altar. It contains the icon of the Lord Jesus Christ appearing to sit, resting His feet on the planet earth for He is the Almighty One, and holding the Bible confirming our orthodox teaching that the Lord is the Way, “I am the way, the truth, and the life. No one comes to the Father except through Me.” (John 14:6)\n\nThe picture of the Lord appears surrounded from the top with the two Coptic letters Ⲗ Ⲱ declaring our faith that the Lord is the Beginning and the End, “I am the Alpha and the Omega, the Beginning and the End,” says the Lord, “who is and who was and who is to come, the Almighty”” (Revelation 1:8), and on both sides of the picture the four Living creatures, the sun and the moon, and the twenty-four heavenly Presbyters offering incense. “Now when He had taken the scroll, the four living creatures and the twenty-four elders fell down before the Lamb, each having a harp, and golden bowls full of incense, which are the prayers of the saints.” (Revelation 5:8)",
       "x":"1950",
       "y":"1150"
     }

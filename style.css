@@ -132,6 +132,7 @@ main {
   font-weight:bold;
   margin-left:1.2em;
   margin-bottom:0.8em;
+  white-space:pre-wrap;
 }
 #tooltip .tt-img {
   border:solid 2px #555;
@@ -232,6 +233,10 @@ modal .close {
 modal .modal-content {
   width:75%;
   max-width:32em;
+  max-height:100%;
+  margin:1em 0;
+  padding:0 1em;
+  overflow-y:scroll;
 }
 modal .modal-content h2 {
   text-align:center;
