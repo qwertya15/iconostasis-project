@@ -12,7 +12,7 @@
     "altar_icon_jesus":{
       "title":"Icon of our Lord Jesus Christ",
       "img_url":"./media/previews/altar_icon_jesus.png",
-      "description":"To the right side of the Royal door is the icon of our Lord Jesus Christ, identified by the Coptic letters “ⲒⲎⲤ ⲠⲬⲤ” on the sides of the Lord’s throne, which is the abbreviation for “Jesus Christ”.  This icon is a reminder that Jesus is the unique gate leading to the heavenly kingdom.\n\nAt the top of the icon the word “ⲠⲈⲚⲤⲰⲦⲎⲢ” is a reminder that Jesus is our “Savior” and He is the Good Shepherd who opened the gates to heaven through His life-giving sacrifice.",
+      "description":"To the right side of the Royal door is the icon of our Lord Jesus Christ, identified by the Coptic letters “<span class=\"coptic-text\">ⲒⲎⲤ ⲠⲬⲤ</span>” on the sides of the Lord’s throne, which is the abbreviation for “Jesus Christ”.  This icon is a reminder that Jesus is the unique gate leading to the heavenly kingdom.\n\nAt the top of the icon the word “<span class=\"coptic-text\">ⲠⲈⲚⲤⲰⲦⲎⲢ</span>” is a reminder that Jesus is our “Savior” and He is the Good Shepherd who opened the gates to heaven through His life-giving sacrifice.",
       "x":"2365",
       "y":"1640"
     },
@@ -36,7 +36,7 @@
     "altar_icon_theotokos":{
       "title":"Icon of Theotokos St. Mary",
       "img_url":"./media/previews/altar_icon_theotokos.png",
-      "description":"To the left of the Royal Doors, is the icon of the Virgin Mary, who represents the whole church and the Queen who sits on the right hand of our Lord Jesus Christ.\n\nThe icon is inscribed with the words “ⲦⲠⲆⲢⲐⲈⲚⲞⲤ-ⲘⲢ ⲐϪ - ⲒⲎⲤ ⲠⲬⲤ” which is the Coptic for “The Virgin Maria mother of Jesus Christ”.",
+      "description":"To the left of the Royal Doors, is the icon of the Virgin Mary, who represents the whole church and the Queen who sits on the right hand of our Lord Jesus Christ.\n\nThe icon is inscribed with the words “<span class=\"coptic-text\">ⲦⲠⲆⲢⲐⲈⲚⲞⲤ</span>-<span class=\"coptic-text\">ⲘⲢ ⲐϪ</span> - <span class=\"coptic-text\">ⲒⲎⲤ ⲠⲬⲤ</span>” which is the Coptic for “The Virgin Maria mother of Jesus Christ”.",
       "x":"1540",
       "y":"1640"
     },
@@ -60,7 +60,7 @@
     "altar_icon_niche":{
       "title":"Niche/apse",
       "img_url":"./media/previews/altar_niche2.png",
-      "description":"The Niche, or the apse, traditionally known as The Father’s Bosom, is the semicircular eastern wall of the Sanctuary facing the Altar. It contains the icon of the Lord Jesus Christ appearing to sit, resting His feet on the planet earth for He is the Almighty One, and holding the Bible confirming our orthodox teaching that the Lord is the Way, “I am the way, the truth, and the life. No one comes to the Father except through Me.” (John 14:6)\n\nThe picture of the Lord appears surrounded from the top with the two Coptic letters Ⲁ Ⲱ declaring our faith that the Lord is the Beginning and the End, “I am the Alpha and the Omega, the Beginning and the End,” says the Lord, “who is and who was and who is to come, the Almighty”” (Revelation 1:8), and on both sides of the picture the four Living creatures, the sun and the moon, and the twenty-four heavenly Presbyters offering incense. “Now when He had taken the scroll, the four living creatures and the twenty-four elders fell down before the Lamb, each having a harp, and golden bowls full of incense, which are the prayers of the saints.” (Revelation 5:8)",
+      "description":"The Niche, or the apse, traditionally known as The Father’s Bosom, is the semicircular eastern wall of the Sanctuary facing the Altar. It contains the icon of the Lord Jesus Christ appearing to sit, resting His feet on the planet earth for He is the Almighty One, and holding the Bible confirming our orthodox teaching that the Lord is the Way, “I am the way, the truth, and the life. No one comes to the Father except through Me.” (John 14:6)\n\nThe picture of the Lord appears surrounded from the top with the two Coptic letters <span class=\"coptic-text\">Ⲁ</span> <span class=\"coptic-text\">Ⲱ</span> declaring our faith that the Lord is the Beginning and the End, “I am the Alpha and the Omega, the Beginning and the End,” says the Lord, “who is and who was and who is to come, the Almighty”” (Revelation 1:8), and on both sides of the picture the four Living creatures, the sun and the moon, and the twenty-four heavenly Presbyters offering incense. “Now when He had taken the scroll, the four living creatures and the twenty-four elders fell down before the Lamb, each having a harp, and golden bowls full of incense, which are the prayers of the saints.” (Revelation 5:8)",
       "x":"1950",
       "y":"1150"
     }

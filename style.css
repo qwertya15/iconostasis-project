@@ -1,3 +1,9 @@
+/* font styles */
+@font-face {
+  font-family:'Coptic1b';
+  src:url('./media/Coptic1b.woff2') format('woff2');
+}
+
 /* page styles */
 html,body {
   width:100%;
@@ -189,6 +195,10 @@ button.element:active {
 }
 .element.active {
   pointer-events:none;
+}
+
+.coptic-text {
+  font-family:'Coptic1b';
 }
 
 /* replit badge styles */
