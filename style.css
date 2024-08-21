@@ -199,6 +199,7 @@ button.element:active {
 
 .coptic-text {
   font-family:'Coptic1b';
+  line-height:0.5em;
 }
 
 /* replit badge styles */
