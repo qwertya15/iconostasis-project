@@ -63,6 +63,14 @@
       "description":"The Niche, or the apse, traditionally known as The Father’s Bosom, is the semicircular eastern wall of the Sanctuary facing the Altar. It contains the icon of the Lord Jesus Christ appearing to sit, resting His feet on the planet earth for He is the Almighty One, and holding the Bible confirming our orthodox teaching that the Lord is the Way, “I am the way, the truth, and the life. No one comes to the Father except through Me.” (John 14:6)\n\nThe picture of the Lord appears surrounded from the top with the two Coptic letters <span class=\"coptic-text\">Ⲁ</span> <span class=\"coptic-text\">Ⲱ</span> declaring our faith that the Lord is the Beginning and the End, “I am the Alpha and the Omega, the Beginning and the End,” says the Lord, “who is and who was and who is to come, the Almighty”” (Revelation 1:8), and on both sides of the picture the four Living creatures, the sun and the moon, and the twenty-four heavenly Presbyters offering incense. “Now when He had taken the scroll, the four living creatures and the twenty-four elders fell down before the Lamb, each having a harp, and golden bowls full of incense, which are the prayers of the saints.” (Revelation 5:8)",
       "x":"1950",
       "y":"1150"
+    },
+
+    "altar_icon_annunciation":{
+      "title":"Annunciation",
+      "img_url":"./media/previews/altar_icon_annunciation.png",
+      "description":"To the left of the icon of St. Mary can be seen the Icon of the Annunciation. The Annunciation is the event in which the Archangel Gabriel came to St. Mary, announcing the good news of the birth and conception of Christ, the promised Messiah, in the virginal womb of Our Mother. The Annunciation is one of the seven major feasts in the Coptic church. The Annunciation is celebrated on the 29th of Paremhotep. This annunciation can be read in Luke 1:26-38, showing the humility and willingness of St. Mary to submit herself to Our Lord and to God’s will. \n\nThe Icon shows the Archangel Gabriel coming to St. Mary, carrying an olive branch, signifying the good news, and the peace to come into the world. The icon also serves as a reminder of the fulfillment of the prophecies concerning our Lord, and the beginning of the ministry led by Him.",
+      "x":"1400",
+      "y":"1640"
     }
     
   }
