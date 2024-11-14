@@ -4,7 +4,7 @@ make fencing more strict: done?
 
 */
 // version number
-const _ver='1.0.0';
+const _ver='1.0.1';
 console.log(`v${v.textContent=_ver}`);
 
 // zoom using mouse scroll wheel
@@ -150,8 +150,8 @@ let T = {
     },250);
   },
   about:{
-    title:`Welcome to \n“Our Iconostasis Exploration”`,
-    desc:`\tWelcome to our interactive journey into the heart of Orthodox Christian worship! We invite you to explore our digital iconostasis by navigating around the screen and clicking on any icons or elements that catch your eye. Each click will reveal detailed insights and information about the significance and purpose of the icon you selected.\n\n\tWhether you are a member of the Orthodox Church or simply curious about its traditions, we hope this website enriches your understanding and appreciation of this sacred art. Enjoy your exploration!`,
+    title:`Welcome!`,
+    desc:`\tWelcome to an interactive journey into the heart of Orthodox Christian worship! We invite you to explore this digital iconostasis by navigating around the screen and clicking on any icons or elements that catch your eye. Each click will reveal detailed insights and information about the significance and purpose of the icon you selected.\n\n\tWhether you are a member of the Orthodox Church or simply curious about its traditions, we hope this website enriches your understanding and appreciation of this sacred art. Enjoy your exploration!`,
     showAbout:()=>{
       T.th.textContent=T.about.title;
       T.ti.classList.add('hidden');
